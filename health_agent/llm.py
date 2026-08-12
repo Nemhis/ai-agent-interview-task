@@ -1,6 +1,6 @@
 import requests
 
-from _config import API_KEY, API_URL, MODEL
+from .config import API_KEY, API_URL, MODEL
 
 
 def call_llm(messages: list[dict], tools: list[dict]) -> dict:

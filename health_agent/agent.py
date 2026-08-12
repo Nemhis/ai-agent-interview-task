@@ -1,9 +1,8 @@
 import json
-import sys
 
-from llm import call_llm
-from tools import get_metric, get_norms, today
-from tools_schema import TOOLS
+from .llm import call_llm
+from .tools import get_metric, get_norms, today
+from .tools.schema import TOOLS
 
 SYSTEM_PROMPT = "You are a health assistant."
 
@@ -19,7 +18,3 @@ def run(question: str) -> str:
         print(json.dumps(message, ensure_ascii=False, indent=2))
 
     return ""
-
-
-if __name__ == "__main__":
-    print(run(sys.argv[1]))

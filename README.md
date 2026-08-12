@@ -10,7 +10,7 @@ LLM-агент с tool calling поверх данных трекера здор
 python -m venv .venv && source .venv/bin/activate
 pip install -r requirements.txt
 cp .env.example .env   # впишите ключ OpenRouter
-python agent.py "сколько я вчера прошёл?"
+python -m health_agent "сколько я вчера прошёл?"
 ```
 
 Python 3.10+.
